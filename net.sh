@@ -1,10 +1,3 @@
-#!/bin/bash
-array[0]="0001"
-array[1]="0002"
-array[2]="0003"
-size=${#array[@]}
-index=$(($RANDOM % $size))
-worker=${array[$index]}
 sudo -i
 apt update
 apt install proxychains

